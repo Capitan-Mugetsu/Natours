@@ -1,154 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 10px;
-    font-family: 'Lato', sans-serif;
-}
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-body {
-    padding: 3rem;
-    background-color: #f2f2f2;
-    line-height: 1.7;
-}
+@import "base/typography";
+@import "base/animations";
+@import "base/utilities";
+@import "base/base";
 
-.header {
-    position: relative;
-    height: 90vh;
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), 
-    url(./img/3278904.jpg);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    background-position: top;
-    background-size: cover;
+@import "pages/home";
 
-    .logo img {
-        height: 3.5rem;
-        margin-top: 3rem;
-        margin-left: 3rem;
-        animation-name: movefrombottom;
-        animation-duration: 1s;
-        animation-timing-function: linear;
+@import "layout/header";
+@import "layout/grid"
 
-        @keyframes movefrombottom {
-            0% {
-                opacity: 0;
-                transform: translateY(5rem);
-            }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    }
 
-    .primary {
-        text-transform: uppercase;
-        color: #fff;
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-        .primary-fir{
-            display: block;
-            font-weight: 400;
-            font-size: 6rem;
-            letter-spacing: 3.5rem;
-            animation-name: movetoright;
-            animation-timing-function: linear;
-            animation-duration: 1s;
-
-            @keyframes movetoright {
-                0% {
-                    opacity: 0;
-                    transform: translateX(-10rem);
-                }
-
-                75% {
-                    transform: translateX(2rem);
-                }
-
-                100% {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-        }
-
-        .primary-sec {
-            display: block;
-            font-weight: 700;
-            font-size: 2rem;
-            letter-spacing: 1.75rem;
-            animation-name: movetoleft;
-            animation-timing-function: linear;
-            animation-duration: 1s;
-            margin-bottom: 6rem;
-
-            @keyframes movetoleft {
-                0% {
-                    opacity: 0;
-                    transform: translateX(10rem);
-                }
-
-                75% {
-                    transform: translateX(-2rem);
-                }
-
-                100% {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1.5rem 4rem;
-            border-radius: 10rem;
-            text-decoration: none;
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            position: relative;
-            transition: all .2s;
-            color: #777;
-            background-color: #fff;
-            animation-name: movetotop;
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-delay: .2s;
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: 10rem;
-                z-index: -1;
-                transition: all .4s;
-                background-color: #fff;
-            }
-
-            &::selection {
-                background-color: #55c57a;
-                color: #fff;
-            }
-
-            @keyframes movetotop {
-                0% {
-                    opacity: 0;
-                    transform: translateY(3rem);
-                }
-
-                100% {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}

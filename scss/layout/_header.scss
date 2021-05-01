@@ -1,0 +1,102 @@
+.header {
+    position: relative;
+    height: 90vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), 
+    url(./img/3278904.jpg);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    background-position: top;
+    background-size: cover;
+
+    .logo img {
+        height: 3.5rem;
+        margin-top: 3rem;
+        margin-left: 3rem;
+        animation-name: movefrombottom;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+
+        @keyframes movefrombottom {
+            0% {
+                opacity: 0;
+                transform: translateY(5rem);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+            
+
+        .btn-white {
+            background-color: $color-white;
+            
+            &::after {
+                background-color: $color-white;
+            }
+        }
+
+        .btn:link,
+        .btn:visited {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            border-radius: 10rem;
+            text-decoration: none;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            position: relative;
+            transition: all .2s;
+            color: $color-grey-dark;
+            animation-name: movetotop;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: .2s;
+
+            &:hover {
+                transform: translateY(-.3rem);
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+            }
+
+            &:hover::after {
+                transform: scale(1.4, 1.6);
+                opacity: 0;
+            }
+
+            &:active {
+                transform: translateY(-.1rem);
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 10rem;
+                z-index: -1;
+                transition: all .4s;
+                background-color: $color-white;
+            }
+
+            &::selection {
+                background-color: $color-primary;
+                color: $color-white;
+            }
+
+            @keyframes movetotop {
+                0% {
+                    opacity: 0;
+                    transform: translateY(3rem);
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }

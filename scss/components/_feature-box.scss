@@ -1,0 +1,37 @@
+.feature-box{
+    background-color: rgba($color-white, .8);
+    font-size: 1.3rem;
+    padding: 2rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: .3rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: all .2s;
+
+    .heading-tertiary {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $color-grey-dark;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    .paragraph {
+        font-size: 1.6rem;
+        color: $color-grey-dark;
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}

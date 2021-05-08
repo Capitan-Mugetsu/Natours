@@ -6,6 +6,11 @@
     font-family: 'Lato', sans-serif;
 }
 
+*:focus,
+*:active {
+    outline: none;
+}
+
 body {
     padding: 3rem;
     background-color: #fff;

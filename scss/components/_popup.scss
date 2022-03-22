@@ -1,0 +1,10 @@
+.popup {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-background-color: rgba ($color-black, .8);
+    background-color: rgba( $color-black, .8);
+    z-index: 101;
+}

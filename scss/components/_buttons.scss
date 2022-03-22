@@ -1,37 +1,42 @@
-.btn-white {
-    background-color: $color-white;
-    color: $color-grey-dark;
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        padding: 1.5rem 3rem;
+        border-radius: 10rem;
+        text-decoration: none;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        position: relative;
+        transition: all .2s;
 
-    &::after {
-        background-color: $color-white;
+        // for button element
+
+        border:none;
+        cursor: pointer;
+
+        animation-name: movetotop;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: .2s;
     }
-}
 
-.btn:link,
-.btn:visited {
-    display: inline-block;
-    padding: 1.5rem 3rem;
-    border-radius: 10rem;
-    text-decoration: none;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    position: relative;
-    transition: all .2s;
-    color: $color-grey-dark;
-    animation-name: movetotop;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-delay: .2s;
+    &-white {
+        background-color: $color-white;
+        color: $color-grey-dark;
     
-    @keyframes movetotop {
-        0% {
-            opacity: 0;
-            transform: translateY(3rem);
+        &::after {
+            background-color: $color-white;
         }
-    
-        100% {
-            transform: translateY(0);
-            opacity: 1;
+    }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
         }
     }
 
@@ -60,12 +65,6 @@
         border-radius: 10rem;
         z-index: -1;
         transition: all .4s;
-        background-color: $color-white;
-    }
-
-    &::selection {
-        background-color: $color-primary;
-        color: $color-white;
     }
 }
 
